@@ -1,0 +1,21 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftText{
+    font-weight: bold;
+    margin-left: 200px;
+}
+
+.darkModeContainer {
+    margin-right: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkModeText {
+    margin-left: 5px;
+}

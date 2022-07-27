@@ -1,0 +1,17 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(203, 201, 199);
+    padding: 20px;
+}
+
+.searchSortContainer {
+    display: flex;
+   justify-content: space-between;
+   width: 80%;
+}

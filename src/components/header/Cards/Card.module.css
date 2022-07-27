@@ -1,0 +1,13 @@
+.cardContainer {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+}
