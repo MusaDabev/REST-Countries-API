@@ -1,5 +1,29 @@
-.sortMenuContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(151, 154, 156);
+    width: 100px;
+    margin: 0;
+}
+
+.item {
+    list-style-type: none;
+
+    width: 80px;
+    margin-bottom: 5px;
+}
+.title {
+    font-weight: bold;
+}
+.button {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    background-color: rgb(151, 154, 156);
+}
+
+.button:hover {
+    background-color: white;
 }

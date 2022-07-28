@@ -2,7 +2,7 @@
 import classes from './Card.module.css';
 
 function Cart({countrie}) {
-console.log(countrie)
+
    
   return (
     <div className={classes.cardContainer}>
