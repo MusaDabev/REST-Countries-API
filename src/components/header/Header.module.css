@@ -6,6 +6,8 @@
 .leftText{
     font-weight: bold;
     margin-left: 200px;
+
+   
 }
 
 .darkModeContainer {
@@ -18,4 +20,19 @@
 
 .darkModeText {
     margin-left: 5px;
+}
+
+.darkMode {
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (max-width: 690px) {
+        .leftText {
+            margin-left: 20px;
+        }
+
+        .darkModeContainer {
+            margin-right: 20px;
+        }
 }

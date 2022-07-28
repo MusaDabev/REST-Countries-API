@@ -13,3 +13,10 @@
 .searchInput:focus {
     outline: none;
 }
+
+@media only screen and (max-width: 390px) {
+   .searchContainer {
+    margin-left: -25px;
+   
+   }
+}

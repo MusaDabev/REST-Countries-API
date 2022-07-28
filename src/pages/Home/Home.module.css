@@ -15,3 +15,18 @@
    justify-content: space-between;
    width: 80%;
 }
+
+.spiner {
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+.darkMode {
+    background-color: black;
+  
+}
+.darkModeSpiner {
+    color: white;
+    height: 100vh;
+    margin-top: 0px;
+}

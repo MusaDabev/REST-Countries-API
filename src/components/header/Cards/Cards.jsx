@@ -4,18 +4,21 @@ import { useEffect, useState, useContext } from "react";
 import classes from "./Cards.module.css";
 import { SortContext } from "../../../context/sortContext";
 
-function Carts({countries}) {
+function Carts({ countries }) {
+  const { filteredData, setFilteredData, searching, darkMode } =
+    useContext(SortContext);
 
-  const {filteredData, setFilteredData, searching} = useContext(SortContext);
-  console.log(filteredData)
- 
   return (
-    <section className={classes.cardsContainer}>
-      {!searching && countries &&
+    <section
+      className={`${classes.cardsContainer} ${darkMode && classes.darkMode}`}
+    >
+      {!searching &&
+        countries &&
         countries.map((countrie) => {
           return <Cart countrie={countrie} />;
         })}
-        {searching && filteredData &&
+      {searching &&
+        filteredData &&
         filteredData.map((countrie) => {
           return <Cart countrie={countrie} />;
         })}
