@@ -4,38 +4,19 @@ import { useEffect, useState, useContext } from "react";
 import classes from "./Cards.module.css";
 import { SortContext } from "../../../context/sortContext";
 
-function Carts() {
-  const [countries, setCountries] = useState(null);
+function Carts({countries}) {
 
-  const { sort } = useContext(SortContext);
-
-  let categoryAndType = sort.split("-");
-  let category = categoryAndType[0];
-  let type = categoryAndType[1];
-
-  let URL = "https://restcountries.com/v3.1/all";
-  if (category === "region") {
-    URL = `https://restcountries.com/v3.1/region/${type}`;
-  } else if (category === "currency") {
-    URL = `https://restcountries.com/v3.1/currency/${type}`;
-  } else if (category === "lang") {
-    URL = `https://restcountries.com/v3.1/lang/${type}`;
-  }
-
-  const fetchCountries = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-
-    setCountries(data);
-  };
-
-  useEffect(() => {
-    fetchCountries();
-  }, [sort]);
+  const {filteredData, setFilteredData, searching} = useContext(SortContext);
+  console.log(filteredData)
+ 
   return (
     <section className={classes.cardsContainer}>
-      {countries &&
+      {!searching && countries &&
         countries.map((countrie) => {
+          return <Cart countrie={countrie} />;
+        })}
+        {searching && filteredData &&
+        filteredData.map((countrie) => {
           return <Cart countrie={countrie} />;
         })}
     </section>
