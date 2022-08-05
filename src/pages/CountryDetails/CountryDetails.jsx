@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import Header from "../../components/header/Header";
-import classes from "./ProductDetails.module.css";
+import classes from "./CountryDetails.module.css";
 import { useParams } from "react-router-dom";
 import { SortContext } from "../../context/sortContext";
 
@@ -32,7 +32,7 @@ function ProductDetails() {
             <p>Area: {product[0].area} </p>
             <p>Population: {product[0].population} </p>
             <p>Language: {product[0].languages.kal} </p>
-            <p>See on goole maps: {product[0].maps.googleMaps} </p>
+            <p>See on goole maps: <a href={product[0].maps.googleMaps} target="_blank">{product[0].maps.googleMaps} </a> </p>
           </div>
         </div>
       )}

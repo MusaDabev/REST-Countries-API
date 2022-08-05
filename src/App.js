@@ -2,7 +2,7 @@ import Header from "./components/header/Header";
 import { SortContext, SortProvider } from "./context/sortContext";
 import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import ProductDetails from "./pages/CountryDetails/CountryDetails";
 
 import classes from "./App.module.css";
 import { useContext } from "react";

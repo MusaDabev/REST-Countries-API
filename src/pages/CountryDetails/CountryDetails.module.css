@@ -16,3 +16,9 @@
     background-color: black;
     color: white;
 }
+
+@media only screen and (max-width: 725px) {
+    .container {
+        flex-direction: column;
+    }
+}
