@@ -1,15 +1,43 @@
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 20px;
     background-color: rgb(203, 201, 199);
-    height: 87vh;
+   
+}
+
+.flagAndCoatOfArms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.flagContainer,
+.coatOfArmsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag {
+   width: 100%;
+}
+
+.coatOfArms {
+    height: 20vh;
 }
 
 .details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 20px;
+    
 }
 
 .darkMode {
@@ -17,8 +45,15 @@
     color: white;
 }
 
-@media only screen and (max-width: 725px) {
-    .container {
+@media only screen and (max-width: 540px) {
+    .flagAndCoatOfArms {
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 452px) {
+    .details {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

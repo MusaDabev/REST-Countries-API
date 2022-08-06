@@ -4,7 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import classes from "./Cards.module.css";
 import { SortContext } from "../../../context/sortContext";
 
-function Carts({ countries }) {
+function Cards({ countries }) {
   const { filteredData, setFilteredData, searching, darkMode } =
     useContext(SortContext);
 
@@ -14,16 +14,16 @@ function Carts({ countries }) {
     >
       {!searching &&
         countries &&
-        countries.map((countrie) => {
-          return <Cart countrie={countrie} />;
+        countries.map((countrie, index) => {
+          return <Cart countrie={countrie} key={index}/>;
         })}
       {searching &&
         filteredData &&
         filteredData.map((countrie) => {
-          return <Cart countrie={countrie} />;
+          return <Cart countrie={countrie} key={countrie.name} />;
         })}
     </section>
   );
 }
 
-export default Carts;
+export default Cards;

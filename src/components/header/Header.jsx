@@ -8,7 +8,8 @@ import {Link } from 'react-router-dom'
 function Header() {
 
  const {darkMode, setDarkMode} = useContext(SortContext)
-
+  const darkModeTitle = "Dark Mode";
+  const lightModeTtitle = "Light Mode";
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
 
@@ -19,7 +20,7 @@ function Header() {
     <Link to='/' style={{textDecoration: 'none', color: "black"}}><p className={`${classes.leftText} ${darkMode && classes.darkMode}`}>Where in the world?</p></Link>  
       <div onClick={handleDarkMode} className={classes.darkModeContainer}>
       {!darkMode ? <MdDarkMode style={{fontSize: "1.2rem"}} /> : <MdOutlineDarkMode style={{fontSize: "1.2rem"}}></MdOutlineDarkMode>} 
-        <p className={classes.darkModeText}>Dark Mode</p>
+        <p className={classes.darkModeText}>{darkMode ? lightModeTtitle : darkModeTitle}</p>
       </div>
     </header>
   )
